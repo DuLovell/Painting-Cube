@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class ChangeColor : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class ChangeColor : MonoBehaviour
     #region Fields
     SpriteRenderer spriteRendererSelf;
     Color colorSelf;
-    SpriteRenderer spriteRendererPlayer;
+    Color colorPlayer;
     bool isColored;
     #endregion
 
@@ -18,7 +19,7 @@ public class ChangeColor : MonoBehaviour
         spriteRendererSelf = GetComponent<SpriteRenderer>();
         colorSelf = spriteRendererSelf.color;
 
-        spriteRendererPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
+        colorPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().Color;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,7 +27,11 @@ public class ChangeColor : MonoBehaviour
         if (!isColored && collision.gameObject.CompareTag("Player"))
         {
             colorSelf = Color.white;
-            spriteRendererSelf.color = colorSelf;
+            //spriteRendererSelf.color = colorSelf;
+
+            Light2D light = gameObject.transform.Find("Light").GetComponent<Light2D>();
+            light.color = colorSelf;
+            light.enabled = true;
         }
     }
 
@@ -34,10 +39,15 @@ public class ChangeColor : MonoBehaviour
     {
         if (!isColored && collision.gameObject.CompareTag("Player"))
         {
-            colorSelf = spriteRendererPlayer.color;
-            spriteRendererSelf.color = colorSelf;
+            colorSelf = colorPlayer;
+            //spriteRendererSelf.color = colorSelf;
             isColored = true;
+            
+            Light2D light = gameObject.transform.Find("Light").GetComponent<Light2D>();
+            light.color = colorSelf;
+            light.enabled = true;
         }
+        
     }
     #endregion
 }
