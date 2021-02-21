@@ -321,7 +321,7 @@ Transform:
   - {fileID: 58096761}
   - {fileID: 148194317}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &48909154
 PrefabInstance:
@@ -1368,6 +1368,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1393951386, guid: ce2116638a7585547ae6963c7254bb29, type: 3}
+      propertyPath: m_Name
+      value: Point Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393951388, guid: ce2116638a7585547ae6963c7254bb29, type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0.107
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393951388, guid: ce2116638a7585547ae6963c7254bb29, type: 3}
+      propertyPath: m_AlphaBlendOnOverlap
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3407631504811238418, guid: ce2116638a7585547ae6963c7254bb29,
         type: 3}
       propertyPath: m_Name
@@ -1376,7 +1388,7 @@ PrefabInstance:
     - target: {fileID: 6204911675153370111, guid: ce2116638a7585547ae6963c7254bb29,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6204911675153370111, guid: ce2116638a7585547ae6963c7254bb29,
         type: 3}
@@ -3193,7 +3205,7 @@ RectTransform:
   m_Children:
   - {fileID: 689278886}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3270,7 +3282,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1411646050
 PrefabInstance:
@@ -3385,7 +3397,7 @@ Transform:
   - {fileID: 1981458980}
   - {fileID: 735346512}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1444551842 stripped
 Transform:
@@ -4328,6 +4340,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1864156897}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1876401007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1876401009}
+  - component: {fileID: 1876401008}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1876401008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876401007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a143040d9606c248adf06c90f797952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <plaformsNumber>k__BackingField: 28
+  <winColor>k__BackingField: {r: 0.12941177, g: 1, b: 0.49803925, a: 1}
+  <playerColor>k__BackingField: {r: 0.12941177, g: 1, b: 0.49803925, a: 1}
+--- !u!4 &1876401009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876401007}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.0299144, y: -1.8541456, z: -539.56915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1955729108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4769,7 +4827,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2121253446
 GameObject:
@@ -4802,7 +4860,7 @@ Transform:
   - {fileID: 1585284479}
   - {fileID: 241828766}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2124005179
 PrefabInstance:
@@ -4949,6 +5007,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: 643390258, guid: 5dca459a85a2b904d9d27a311854acd6, type: 3}
+      propertyPath: m_AlphaBlendOnOverlap
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder

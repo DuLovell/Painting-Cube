@@ -11,16 +11,26 @@ public class ChangeColor : MonoBehaviour
     Color colorSelf;
     Color colorPlayer;
     bool isColored;
+    Color winColor;
+    Light2D squareLight;
     #endregion
 
     #region Methods
     private void Awake()
     {
+        squareLight = gameObject.transform.Find("Light").GetComponent<Light2D>();
         spriteRendererSelf = GetComponent<SpriteRenderer>();
         colorSelf = spriteRendererSelf.color;
 
-        colorPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().Color;
+        winColor = LevelManager.Instance.winColor;
     }
+
+    private void Start()
+    {
+        colorPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().color;
+    }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,9 +39,8 @@ public class ChangeColor : MonoBehaviour
             colorSelf = Color.white;
             //spriteRendererSelf.color = colorSelf;
 
-            Light2D light = gameObject.transform.Find("Light").GetComponent<Light2D>();
-            light.color = colorSelf;
-            light.enabled = true;
+            squareLight.color = colorSelf;
+            squareLight.enabled = true;
         }
     }
 
@@ -43,12 +52,12 @@ public class ChangeColor : MonoBehaviour
             //spriteRendererSelf.color = colorSelf;
             isColored = true;
             
-            Light2D light = gameObject.transform.Find("Light").GetComponent<Light2D>();
-            light.color = colorSelf;
-            light.enabled = true;
+            squareLight.color = colorSelf;
+            squareLight.enabled = true;
 
             // Запустить ивент
-            EventManager.Instance.OnPlatformColorChange();
+            if (colorSelf == winColor)
+                EventManager.Instance.OnPlatformWinColorChange();
         }
         
     }

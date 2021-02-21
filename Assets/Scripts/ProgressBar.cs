@@ -6,26 +6,28 @@ using UnityEngine.UI;
 public class ProgressBar : MonoBehaviour
 {
     [SerializeField] Slider slider;
-
-    public void SetMaxPlatforms(int platformsNumber)
-    {
-        slider.maxValue = platformsNumber;
-    }
+    Image fillImage;
 
     public void SetPlatform()
     {
         slider.value++;
     }
 
-    private void OnEnable()
+    private void Awake()
     {
-        // подписаться на ивент
-        EventManager.Instance.onPlatformColorChange += SetPlatform;
+        fillImage = GameObject.Find("Fill").GetComponent<Image>();
+    }
+
+    private void Start()
+    {
+        fillImage.color = LevelManager.Instance.winColor;
+        slider.maxValue = LevelManager.Instance.plaformsNumber;
+
+        EventManager.Instance.onPlatformWinColorChange += SetPlatform;
     }
 
     private void OnDisable()
     {
-        // отписаться от ивента
-        EventManager.Instance.onPlatformColorChange -= SetPlatform;
+        EventManager.Instance.onPlatformWinColorChange -= SetPlatform;
     }
 }

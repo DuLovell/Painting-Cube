@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
-public class EventManager : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
-    static EventManager instance;
-
-    public static EventManager Instance
+    static LevelManager instance;
+    [field: SerializeField] public int plaformsNumber { get; private set; }
+    [field: SerializeField] public Color winColor { get; private set; }
+    [field: SerializeField] public Color playerColor { get; private set; }
+    
+    public static LevelManager Instance
     {
         get { return instance; }
     }
@@ -23,13 +25,5 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public event Action onPlatformWinColorChange;
-    public void OnPlatformWinColorChange()
-    {
-        if (onPlatformWinColorChange != null)
-        {
-            onPlatformWinColorChange();
-        }
-    }
-
+    // GenerateLevel()
 }

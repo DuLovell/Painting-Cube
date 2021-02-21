@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7952c8d0d092e8741b866fb2b29641a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Color>k__BackingField: {r: 0.21568629, g: 0.85098046, b: 0.54901963, a: 0}
+  <color>k__BackingField: {r: 0.6415094, g: 0.1694553, b: 0.1694553, a: 0}
 --- !u!61 &1514750002
 BoxCollider2D:
   m_ObjectHideFlags: 0
