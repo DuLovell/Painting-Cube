@@ -46,6 +46,9 @@ public class ChangeColor : MonoBehaviour
             Light2D light = gameObject.transform.Find("Light").GetComponent<Light2D>();
             light.color = colorSelf;
             light.enabled = true;
+
+            // Запустить ивент
+            EventManager.Instance.OnPlatformColorChange();
         }
         
     }
