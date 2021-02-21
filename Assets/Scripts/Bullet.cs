@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         Physics2D.IgnoreLayerCollision(8, 8, true);
+        Physics2D.IgnoreLayerCollision(8, 9, true);
         rb2D.AddForce(transform.up * impulse, ForceMode2D.Impulse);
     }
 

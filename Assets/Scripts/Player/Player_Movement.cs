@@ -12,11 +12,16 @@ public class Player_Movement : MonoBehaviour
     bool isMooving;
     Vector3 origPos, targetPos;
     float timeToMove = 0.2f;
+
+    BoxCollider2D selfCollider;
+    [SerializeField] LayerMask blockingLayer;
     #endregion
 
+    #region Methods
     private void Awake()
     {
         inputActions = new PlayerControls();
+        selfCollider = GetComponent<BoxCollider2D>();
     }
 
     private void OnEnable()
@@ -30,15 +35,32 @@ public class Player_Movement : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 direction = inputActions.Default.Move.ReadValue<Vector2>();
         if (!isMooving && Math.Abs(direction.x) != Math.Abs(direction.y))
         {
-            StartCoroutine(Move(direction));
+            TryMove(direction);
         }
 
+    }
+
+    private bool TryMove(Vector3 direction)
+    {
+        RaycastHit2D hit;
+
+        origPos = transform.position;
+        targetPos = origPos + direction;
+
+        hit = Physics2D.Linecast(origPos, targetPos, blockingLayer);
+
+        if (hit.collider != null)
+            return false;
+        else
+        {
+            StartCoroutine(Move(direction));
+            return true;
+        }
     }
 
     private IEnumerator Move(Vector3 direction)
@@ -62,4 +84,6 @@ public class Player_Movement : MonoBehaviour
 
         isMooving = false;
     }
+    #endregion
+
 }
