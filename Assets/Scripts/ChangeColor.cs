@@ -10,7 +10,6 @@ public class ChangeColor : MonoBehaviour
     SpriteRenderer spriteRendererSelf;
     Color colorSelf;
     Color colorPlayer;
-    bool isColored;
     Color winColor;
     Light2D squareLight;
     #endregion
@@ -25,36 +24,32 @@ public class ChangeColor : MonoBehaviour
 
     private void Start()
     {
-        winColor = LevelManager.Instance.winColor;
+        winColor = LevelManager.Instance.seedsColor;
     }
 
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!isColored && collision.gameObject.CompareTag("Player"))
-        {
-            colorSelf = Color.white;
-
-            squareLight.color = colorSelf;
-            squareLight.enabled = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (!isColored && collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Color colorPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().color;
             colorSelf = colorPlayer;
-            isColored = true;
-            
+
             squareLight.color = colorSelf;
             squareLight.enabled = true;
 
             // Запустить ивент
             if (colorSelf == winColor)
                 EventManager.Instance.OnPlatformWinColorChange();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && colorSelf == LevelManager.Instance.seedsColor)
+        {
+            colorSelf = LevelManager.Instance.grassColor;
         }
         
     }
