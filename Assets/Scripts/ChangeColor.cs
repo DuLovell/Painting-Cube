@@ -21,13 +21,11 @@ public class ChangeColor : MonoBehaviour
         squareLight = gameObject.transform.Find("Light").GetComponent<Light2D>();
         spriteRendererSelf = GetComponent<SpriteRenderer>();
         colorSelf = spriteRendererSelf.color;
-
-        winColor = LevelManager.Instance.winColor;
     }
 
     private void Start()
     {
-        colorPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().color;
+        winColor = LevelManager.Instance.winColor;
     }
 
 
@@ -37,7 +35,6 @@ public class ChangeColor : MonoBehaviour
         if (!isColored && collision.gameObject.CompareTag("Player"))
         {
             colorSelf = Color.white;
-            //spriteRendererSelf.color = colorSelf;
 
             squareLight.color = colorSelf;
             squareLight.enabled = true;
@@ -48,8 +45,8 @@ public class ChangeColor : MonoBehaviour
     {
         if (!isColored && collision.gameObject.CompareTag("Player"))
         {
+            Color colorPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().color;
             colorSelf = colorPlayer;
-            //spriteRendererSelf.color = colorSelf;
             isColored = true;
             
             squareLight.color = colorSelf;

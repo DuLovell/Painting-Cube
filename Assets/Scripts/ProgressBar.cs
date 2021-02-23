@@ -11,6 +11,9 @@ public class ProgressBar : MonoBehaviour
     public void SetPlatform()
     {
         slider.value++;
+        if (slider.maxValue == slider.value)
+            EventManager.Instance.OnLevelWin();
+        
     }
 
     private void Awake()
@@ -22,12 +25,5 @@ public class ProgressBar : MonoBehaviour
     {
         fillImage.color = LevelManager.Instance.winColor;
         slider.maxValue = LevelManager.Instance.plaformsNumber;
-
-        EventManager.Instance.onPlatformWinColorChange += SetPlatform;
-    }
-
-    private void OnDisable()
-    {
-        EventManager.Instance.onPlatformWinColorChange -= SetPlatform;
     }
 }

@@ -27,9 +27,16 @@ public class EventManager : MonoBehaviour
     public void OnPlatformWinColorChange()
     {
         if (onPlatformWinColorChange != null)
-        {
             onPlatformWinColorChange();
-        }
     }
+
+    public event Action onLevelWin;
+    public void OnLevelWin()
+    {
+        if (onLevelWin != null)
+            onLevelWin();
+    }
+
+    // onLevelLost
 
 }
