@@ -50,6 +50,7 @@ public class LevelManager : MonoBehaviour
     private void ShowWinMessage()
     {
         winScreen.SetActive(true);
+        Time.timeScale = 0f;
     }
 
 
