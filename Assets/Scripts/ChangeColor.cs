@@ -11,13 +11,11 @@ public class ChangeColor : MonoBehaviour
     Color colorSelf;
     Color colorPlayer;
     Color winColor;
-    Light2D squareLight;
     #endregion
 
     #region Methods
     private void Awake()
     {
-        squareLight = gameObject.transform.Find("Light").GetComponent<Light2D>();
         spriteRendererSelf = GetComponent<SpriteRenderer>();
         colorSelf = spriteRendererSelf.color;
     }
@@ -34,10 +32,12 @@ public class ChangeColor : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Color colorPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().color;
-            colorSelf = colorPlayer;
 
-            squareLight.color = colorSelf;
-            squareLight.enabled = true;
+            if (colorSelf == LevelManager.Instance.grassColor && colorPlayer == LevelManager.Instance.seedsColor)
+                return;
+
+            colorSelf = colorPlayer;
+            spriteRendererSelf.color = colorSelf;
 
             // Запустить ивент
             if (colorSelf == winColor)
@@ -49,9 +49,11 @@ public class ChangeColor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && colorSelf == LevelManager.Instance.seedsColor)
         {
-            colorSelf = LevelManager.Instance.grassColor;
-        }
-        
+            colorSelf = LevelManager.Instance.grassColor; // пометка
+            spriteRendererSelf.color = colorSelf; // пометка
+        } 
     }
+
+    // Добавить функцию ChangeColor(Color color), чтобы не писать две помеченные строки
     #endregion
 }

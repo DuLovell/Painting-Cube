@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ChangeEquipment : MonoBehaviour
 {
-    [field: SerializeField] public Color grassCutter { get; private set; }
-    [field: SerializeField] public Color seedsColor { get; private set; }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,10 +11,10 @@ public class ChangeEquipment : MonoBehaviour
         {
             Player player = collision.gameObject.GetComponent<Player>();
 
-            if (player.color == grassCutter)
-                player.color = seedsColor;    
+            if (player.color == LevelManager.Instance.groundColor)
+                player.color = LevelManager.Instance.seedsColor;    
             else
-                player.color = grassCutter;
+                player.color = LevelManager.Instance.groundColor;
         }
     }
 }

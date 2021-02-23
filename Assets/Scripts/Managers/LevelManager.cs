@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject pauseScreen;
     [field: SerializeField] public int plaformsNumber { get; private set; }
     [field: SerializeField] public Color seedsColor { get; private set; }
+    [field: SerializeField] public Color groundColor { get; private set; }
     [field: SerializeField] public Color grassColor { get; private set; }
     [field: SerializeField] public Color playerColor { get; private set; }
 
