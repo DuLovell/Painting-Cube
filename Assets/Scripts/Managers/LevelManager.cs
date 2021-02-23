@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LevelManager : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField] ProgressBar progressBar;
     [SerializeField] GameObject hud;
     [SerializeField] GameObject winScreen;
+    [SerializeField] GameObject pauseScreen;
     [field: SerializeField] public int plaformsNumber { get; private set; }
     [field: SerializeField] public Color winColor { get; private set; }
     [field: SerializeField] public Color playerColor { get; private set; }
 
+    public bool isPaused { get; private set; }
     
     public static LevelManager Instance
     {
@@ -51,6 +54,23 @@ public class LevelManager : MonoBehaviour
     {
         winScreen.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+    public void PauseGame(InputAction.CallbackContext context)
+    {
+        if (!isPaused)
+        {
+            Time.timeScale = 0f;
+            isPaused = true;
+            pauseScreen.SetActive(true);
+        }
+        else
+        {
+            pauseScreen.SetActive(false);
+            Time.timeScale = 1f;
+            isPaused = false;
+        }
+        
     }
 
 
