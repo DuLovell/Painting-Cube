@@ -11,10 +11,10 @@ public class ChangeEquipment : MonoBehaviour
         {
             Player player = collision.gameObject.GetComponent<Player>();
 
-            if (player.color == LevelManager.Instance.groundColor)
-                player.color = LevelManager.Instance.seedsColor;    
+            if (player.type == CellType.Ground)
+                player.type = CellType.Seeds;    
             else
-                player.color = LevelManager.Instance.groundColor;
+                player.type = CellType.Ground;
         }
     }
 }

@@ -23,7 +23,7 @@ public class ProgressBar : MonoBehaviour
 
     private void Start()
     {
-        fillImage.color = LevelManager.Instance.seedsColor;
+        fillImage.color = Color.green;
         slider.maxValue = LevelManager.Instance.plaformsNumber;
     }
 }

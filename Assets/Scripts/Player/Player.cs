@@ -5,12 +5,12 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class Player : MonoBehaviour
 {
-    [field: SerializeField] public Color color { get; set; }
+    [field: SerializeField] public CellType type { get; set; }
 
 
     private void Start()
     {
-        color = LevelManager.Instance.playerColor; 
+        type = LevelManager.Instance.playerType; 
     }
 
 
