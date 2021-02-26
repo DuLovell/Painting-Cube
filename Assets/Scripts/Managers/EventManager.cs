@@ -37,11 +37,11 @@ public class EventManager : MonoBehaviour
             onPlatformLoseColorChange();
     }
 
-    public event Action onLevelWin;
-    public void OnLevelWin()
+    public event Action onLevelEnd;
+    public void OnLevelEnd()
     {
-        if (onLevelWin != null)
-            onLevelWin();
+        if (onLevelEnd != null)
+            onLevelEnd();
     }
 
     // onLevelLost

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,34 +33,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public event Action onPlatformWinColorChange;
+    public void OnPlatformWinColorChange()
     {
-        EventManager.Instance.onPlatformWinColorChange += OnPlatformWinColorChange;
-        EventManager.Instance.onPlatformLoseColorChange += OnPlatformLoseColorChange;
-        EventManager.Instance.onLevelWin += EndLevel;
-    }
-
-    private void OnDisable()
-    {
-        EventManager.Instance.onPlatformWinColorChange -= OnPlatformWinColorChange;
-        EventManager.Instance.onPlatformLoseColorChange -= OnPlatformLoseColorChange;
-        EventManager.Instance.onLevelWin -= EndLevel;
-    }
-
-    private void OnPlatformWinColorChange()
-    {
+        if (onPlatformWinColorChange != null)
+            onPlatformWinColorChange();
         progressBar.AddPoints();
     }
 
-    private void OnPlatformLoseColorChange()
+    public event Action onPlatformLoseColorChange;
+    public void OnPlatformLoseColorChange()
     {
+        if (onPlatformLoseColorChange != null)
+            onPlatformLoseColorChange();
         progressBar.TakeAwayPoints();
     }
 
-    private void EndLevel()
+    public event Action onLevelEnd;
+    public void OnLevelEnd()
     {
         winScreen.SetActive(true);
         Time.timeScale = 0f;
+
+        if (onLevelEnd != null)
+            onLevelEnd();
     }
 
     public void PauseGame(InputAction.CallbackContext context)
@@ -78,8 +75,4 @@ public class GameManager : MonoBehaviour
         }
         
     }
-
-
-
-    // GenerateLevel()
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7289374755564301019}
   - component: {fileID: -6352488712181558595}
   m_Layer: 0
-  m_Name: Platform_Default
+  m_Name: Cell_Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,13 +72,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4018074224661003100, guid: 320391c68db2bae459493e6b1f6349b7,
+  m_Sprite: {fileID: -1938528809214408908, guid: 04dd0cb6ce40d8940b7a1b3daec275b7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.05, y: 0.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,8 +101,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.99, y: 0.945}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.05, y: 0.97}
+    newSize: {x: 1.05, y: 0.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -125,6 +125,6 @@ MonoBehaviour:
   selfType: 0
   winType: 1
   sprites:
-  - {fileID: 21300000, guid: 04dd0cb6ce40d8940b7a1b3daec275b7, type: 3}
+  - {fileID: -1938528809214408908, guid: 04dd0cb6ce40d8940b7a1b3daec275b7, type: 3}
   - {fileID: 4018074224661003100, guid: 320391c68db2bae459493e6b1f6349b7, type: 3}
   - {fileID: -2862981681530525291, guid: 8d3940e0bc5990e47a11486dea6b0f8d, type: 3}

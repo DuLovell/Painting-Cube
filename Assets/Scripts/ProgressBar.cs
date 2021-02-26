@@ -12,7 +12,7 @@ public class ProgressBar : MonoBehaviour
     {
         slider.value++;
         if (slider.maxValue == slider.value)
-            EventManager.Instance.OnLevelWin();
+            GameManager.Instance.OnLevelEnd();
     }
 
     public void TakeAwayPoints()
