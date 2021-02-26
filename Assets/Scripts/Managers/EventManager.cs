@@ -30,6 +30,13 @@ public class EventManager : MonoBehaviour
             onPlatformWinColorChange();
     }
 
+    public event Action onPlatformLoseColorChange;
+    public void OnPlatformLoseColorChange()
+    {
+        if (onPlatformLoseColorChange != null)
+            onPlatformLoseColorChange();
+    }
+
     public event Action onLevelWin;
     public void OnLevelWin()
     {

@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfType: 0
-  winType: 0
+  winType: 1
   sprites:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 04dd0cb6ce40d8940b7a1b3daec275b7, type: 3}
   - {fileID: 4018074224661003100, guid: 320391c68db2bae459493e6b1f6349b7, type: 3}
-  - {fileID: 0}
+  - {fileID: -2862981681530525291, guid: 8d3940e0bc5990e47a11486dea6b0f8d, type: 3}

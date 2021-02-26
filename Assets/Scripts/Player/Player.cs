@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        type = LevelManager.Instance.playerType; 
+        type = LevelManager.Instance.startPlayerType; 
     }
 
 

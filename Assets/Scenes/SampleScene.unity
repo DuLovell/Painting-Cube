@@ -474,6 +474,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -783,6 +788,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1201,6 +1211,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1276,6 +1291,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1858,6 +1878,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1939,6 +1964,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -2326,6 +2356,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -2486,6 +2521,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -2849,6 +2889,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -3365,6 +3410,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -4194,6 +4244,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -4680,6 +4735,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -5049,6 +5109,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 26803451}
     m_Modifications:
+    - target: {fileID: -6352488712181558595, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: winType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7289374755564301017, guid: 5dca459a85a2b904d9d27a311854acd6,
         type: 3}
       propertyPath: m_RootOrder
@@ -5382,10 +5447,7 @@ MonoBehaviour:
   winScreen: {fileID: 611489756}
   pauseScreen: {fileID: 927089969}
   <plaformsNumber>k__BackingField: 28
-  <seedsColor>k__BackingField: {r: 0.32941177, g: 0.22745098, b: 0.023529412, a: 1}
-  <groundColor>k__BackingField: {r: 0.7058824, g: 0.47450984, b: 0.1137255, a: 1}
-  <grassColor>k__BackingField: {r: 0.21960784, g: 0.8, b: 0.22352941, a: 1}
-  <playerType>k__BackingField: 1
+  <startPlayerType>k__BackingField: 1
 --- !u!4 &1876401009
 Transform:
   m_ObjectHideFlags: 0

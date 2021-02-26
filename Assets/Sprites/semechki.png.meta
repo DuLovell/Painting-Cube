@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 320391c68db2bae459493e6b1f6349b7
+guid: 8d3940e0bc5990e47a11486dea6b0f8d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4018074224661003100
-    second: Cell_Ground
-  - first:
-      213: -4869357254534750094
-    second: Cell_Barn
+      213: -2862981681530525291
+    second: Cell_Seeds
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -37,12 +34,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -70,7 +67,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,7 +79,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -94,7 +91,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,34 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cell_Ground
+      name: Cell_Seeds
       rect:
         serializedVersion: 2
-        x: 602
-        y: 382
-        width: 198
-        height: 189
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5b721af73113c730800000000000000
-      internalID: 4018074224661003100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cell_Barn
-      rect:
-        serializedVersion: 2
-        x: 1602
-        y: 768
-        width: 211
-        height: 230
+        x: 1205
+        y: 587
+        width: 192
+        height: 185
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +116,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2702cfe30619c6cb0800000000000000
-      internalID: -4869357254534750094
+      spriteID: 5992ce15455a448d0800000000000000
+      internalID: -2862981681530525291
       vertices: []
       indices: 
       edges: []

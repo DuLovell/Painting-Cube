@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject pauseScreen;
     [field: SerializeField] public int plaformsNumber { get; private set; }
-    [field: SerializeField] public CellType playerType { get; private set; }
+    [field: SerializeField] public CellType startPlayerType { get; private set; }
 
     public bool isPaused { get; private set; }
     
@@ -35,18 +35,25 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         EventManager.Instance.onPlatformWinColorChange += OnPlatformWinColorChange;
+        EventManager.Instance.onPlatformLoseColorChange += OnPlatformLoseColorChange;
         EventManager.Instance.onLevelWin += ShowWinMessage;
     }
 
     private void OnDisable()
     {
         EventManager.Instance.onPlatformWinColorChange -= OnPlatformWinColorChange;
+        EventManager.Instance.onPlatformLoseColorChange -= OnPlatformLoseColorChange;
         EventManager.Instance.onLevelWin -= ShowWinMessage;
     }
 
     void OnPlatformWinColorChange()
     {
-        progressBar.SetPlatform();
+        progressBar.AddPoints();
+    }
+
+    void OnPlatformLoseColorChange()
+    {
+        progressBar.TakeAwayPoints();
     }
 
     private void ShowWinMessage()

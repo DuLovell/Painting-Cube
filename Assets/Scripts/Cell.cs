@@ -9,6 +9,7 @@ public class Cell : MonoBehaviour
     #region Fields
     SpriteRenderer spriteRendererSelf;
     CellType playerType;
+    bool isWinType;
 
     [SerializeField] CellType selfType;
     [SerializeField] CellType winType;
@@ -24,8 +25,14 @@ public class Cell : MonoBehaviour
     {
         spriteRendererSelf = GetComponent<SpriteRenderer>();
         
+        
+    }
+
+    private void Start()
+    {
         ChangeSelfType(CellType.Grass);
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,14 +40,14 @@ public class Cell : MonoBehaviour
         {
             playerType = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().type;
 
-            if (selfType == CellType.Grass && playerType == CellType.Seeds)
+            if (selfType == CellType.Grass && playerType == CellType.Seeds || selfType == playerType)
                 return;
 
             ChangeSelfType(playerType);
 
-            // Запустить ивент
-            if (selfType == winType)
-                EventManager.Instance.OnPlatformWinColorChange();
+            //// Запустить ивент
+            //if (selfType == winType)
+            //    EventManager.Instance.OnPlatformWinColorChange();
         }
     }
 
@@ -49,6 +56,7 @@ public class Cell : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && selfType == CellType.Seeds)
         {
             ChangeSelfType(CellType.Grass);
+            // EventManager.Instance.OnPlatformLooseColorChange();
         } 
     }
 
@@ -56,6 +64,18 @@ public class Cell : MonoBehaviour
     {
         selfType = cellType;
         spriteRendererSelf.sprite = sprites[(int)selfType];
+
+        if (!isWinType && cellType == winType)
+        {
+            EventManager.Instance.OnPlatformWinColorChange();
+            isWinType = true;
+        }
+        else if (isWinType && cellType != winType)
+        {
+            EventManager.Instance.OnPlatformLoseColorChange();
+            isWinType = false;
+        }
+            
     }
     #endregion
 }

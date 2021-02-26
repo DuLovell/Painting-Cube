@@ -8,12 +8,16 @@ public class ProgressBar : MonoBehaviour
     [SerializeField] Slider slider;
     Image fillImage;
 
-    public void SetPlatform()
+    public void AddPoints()
     {
         slider.value++;
         if (slider.maxValue == slider.value)
             EventManager.Instance.OnLevelWin();
-        
+    }
+
+    public void TakeAwayPoints()
+    {
+        slider.value--;
     }
 
     private void Awake()
