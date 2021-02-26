@@ -2258,7 +2258,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 1
   m_MinValue: 0
-  m_MaxValue: 28
+  m_MaxValue: 24
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -5446,7 +5446,7 @@ MonoBehaviour:
   hud: {fileID: 1303752457}
   winScreen: {fileID: 611489756}
   pauseScreen: {fileID: 927089969}
-  <plaformsNumber>k__BackingField: 28
+  <plaformsNumber>k__BackingField: 24
   <startPlayerType>k__BackingField: 1
 --- !u!4 &1876401009
 Transform:

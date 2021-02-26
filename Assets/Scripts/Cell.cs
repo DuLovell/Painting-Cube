@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
@@ -24,13 +25,12 @@ public class Cell : MonoBehaviour
     private void Awake()
     {
         spriteRendererSelf = GetComponent<SpriteRenderer>();
-        
-        
     }
 
     private void Start()
     {
         ChangeSelfType(CellType.Grass);
+        ManageChangeInType();
     }
 
 
@@ -44,10 +44,7 @@ public class Cell : MonoBehaviour
                 return;
 
             ChangeSelfType(playerType);
-
-            //// Запустить ивент
-            //if (selfType == winType)
-            //    EventManager.Instance.OnPlatformWinColorChange();
+            ManageChangeInType();
         }
     }
 
@@ -56,26 +53,28 @@ public class Cell : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && selfType == CellType.Seeds)
         {
             ChangeSelfType(CellType.Grass);
-            // EventManager.Instance.OnPlatformLooseColorChange();
+            ManageChangeInType();
         } 
     }
 
     private void ChangeSelfType(CellType cellType)
     {
         selfType = cellType;
-        spriteRendererSelf.sprite = sprites[(int)selfType];
+        spriteRendererSelf.sprite = sprites[(int)selfType];    
+    }
 
-        if (!isWinType && cellType == winType)
+    private void ManageChangeInType()
+    {
+        if (!isWinType && selfType == winType)
         {
             EventManager.Instance.OnPlatformWinColorChange();
             isWinType = true;
         }
-        else if (isWinType && cellType != winType)
+        else if (isWinType && selfType != winType)
         {
             EventManager.Instance.OnPlatformLoseColorChange();
             isWinType = false;
         }
-            
     }
     #endregion
 }

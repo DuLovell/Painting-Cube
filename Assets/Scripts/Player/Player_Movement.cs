@@ -38,7 +38,7 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
         Vector2 direction = inputActions.Default.Move.ReadValue<Vector2>();
-        if (!isMooving && Math.Abs(direction.x) != Math.Abs(direction.y) && !LevelManager.Instance.isPaused) // убрать связь с LevelManager
+        if (!isMooving && Math.Abs(direction.x) != Math.Abs(direction.y) && !GameManager.Instance.isPaused) // убрать связь с LevelManager
         {
             TryMove(direction);
         }

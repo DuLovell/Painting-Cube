@@ -28,6 +28,6 @@ public class ProgressBar : MonoBehaviour
     private void Start()
     {
         fillImage.color = Color.green;
-        slider.maxValue = LevelManager.Instance.plaformsNumber;
+        slider.maxValue = GameManager.Instance.plaformsNumber;
     }
 }

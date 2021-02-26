@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class LevelManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    static LevelManager instance;
+    static GameManager instance;
 
     [SerializeField] ProgressBar progressBar;
     [SerializeField] GameObject hud;
@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
 
     public bool isPaused { get; private set; }
     
-    public static LevelManager Instance
+    public static GameManager Instance
     {
         get { return instance; }
     }
@@ -36,27 +36,27 @@ public class LevelManager : MonoBehaviour
     {
         EventManager.Instance.onPlatformWinColorChange += OnPlatformWinColorChange;
         EventManager.Instance.onPlatformLoseColorChange += OnPlatformLoseColorChange;
-        EventManager.Instance.onLevelWin += ShowWinMessage;
+        EventManager.Instance.onLevelWin += EndLevel;
     }
 
     private void OnDisable()
     {
         EventManager.Instance.onPlatformWinColorChange -= OnPlatformWinColorChange;
         EventManager.Instance.onPlatformLoseColorChange -= OnPlatformLoseColorChange;
-        EventManager.Instance.onLevelWin -= ShowWinMessage;
+        EventManager.Instance.onLevelWin -= EndLevel;
     }
 
-    void OnPlatformWinColorChange()
+    private void OnPlatformWinColorChange()
     {
         progressBar.AddPoints();
     }
 
-    void OnPlatformLoseColorChange()
+    private void OnPlatformLoseColorChange()
     {
         progressBar.TakeAwayPoints();
     }
 
-    private void ShowWinMessage()
+    private void EndLevel()
     {
         winScreen.SetActive(true);
         Time.timeScale = 0f;
