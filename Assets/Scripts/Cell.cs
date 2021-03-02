@@ -69,11 +69,11 @@ public class Cell : MonoBehaviour
     {
         if (!isWinType && selfType == winType)
         {
-            GameManager.Instance.OnPlatformWinColorChange();
+            // add points
         }
         else if (isWinType && selfType != winType)
         {
-            GameManager.Instance.OnPlatformLoseColorChange();
+            // substract points
         }
     }
     #endregion

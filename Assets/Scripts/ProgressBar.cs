@@ -5,20 +5,8 @@ using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour
 {
-    [SerializeField] Slider slider;
-    Image fillImage;
-
-    public void AddPoints()
-    {
-        slider.value++;
-        if (slider.maxValue == slider.value)
-            GameManager.Instance.OnLevelEnd();
-    }
-
-    public void TakeAwayPoints()
-    {
-        slider.value--;
-    }
+    [SerializeField] private Slider slider;
+    private Image fillImage;
 
     private void Awake()
     {
@@ -29,5 +17,13 @@ public class ProgressBar : MonoBehaviour
     {
         fillImage.color = Color.green;
         slider.maxValue = GameManager.Instance.plaformsNumber;
+    }
+
+    private void Update()
+    {
+        if (GameManager.Instance != null && slider != null)
+        {
+            slider.value = GameManager.Instance.totalPoints;
+        }
     }
 }

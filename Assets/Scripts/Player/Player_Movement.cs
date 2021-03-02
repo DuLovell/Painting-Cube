@@ -7,14 +7,16 @@ using UnityEngine.InputSystem;
 public class Player_Movement : MonoBehaviour
 {
     #region Fields
-    PlayerControls inputActions;
+    [SerializeField] private LayerMask blockingLayer;
 
-    bool isMooving;
-    Vector3 origPos, targetPos;
-    float timeToMove = 0.2f;
+    private PlayerControls inputActions;
 
-    BoxCollider2D selfCollider;
-    [SerializeField] LayerMask blockingLayer;
+    private bool isMooving;
+    private Vector3 origPos, targetPos;
+    private float timeToMove = 0.2f;
+
+    private BoxCollider2D selfCollider;
+    
     #endregion
 
     #region Methods
@@ -35,10 +37,10 @@ public class Player_Movement : MonoBehaviour
     }
 
 
-    void Update()
+    private void Update()
     {
         Vector2 direction = inputActions.Default.Move.ReadValue<Vector2>();
-        if (!isMooving && Math.Abs(direction.x) != Math.Abs(direction.y) && !GameManager.Instance.isPaused) // убрать связь с LevelManager
+        if (!isMooving && Math.Abs(direction.x) != Math.Abs(direction.y))
         {
             TryMove(direction);
         }
