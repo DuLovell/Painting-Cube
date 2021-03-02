@@ -8,14 +8,14 @@ public class Cell : MonoBehaviour
 {
 
     #region Fields
-    SpriteRenderer spriteRendererSelf;
-    CellType playerType;
-    bool isWinType;
+    private SpriteRenderer spriteRendererSelf;
+    private CellType playerType;
+    private bool isWinType;
 
-    [SerializeField] CellType selfType;
-    [SerializeField] CellType winType;
+    [SerializeField] private CellType selfType;
+    [SerializeField] private CellType winType;
 
-    [SerializeField] Sprite[] sprites = new Sprite[3];
+    [SerializeField] private Sprite[] sprites = new Sprite[3];
     #endregion
 
     #region Methods
@@ -69,11 +69,11 @@ public class Cell : MonoBehaviour
     {
         if (!isWinType && selfType == winType)
         {
-            // add points
+            GameManager.Instance.AddPoints();
         }
         else if (isWinType && selfType != winType)
         {
-            // substract points
+            GameManager.Instance.SubstractPoints();
         }
     }
     #endregion

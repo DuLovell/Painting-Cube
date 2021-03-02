@@ -9,6 +9,15 @@ namespace LevelManagement
         public void OnPausePressed()
         {
             Time.timeScale = 0;
+
+            // disable player controls
+            Player_Movement playerControls = GameObject.FindObjectOfType<Player_Movement>();
+
+            if (playerControls != null)
+            {
+                playerControls.enabled = false;
+            }
+
             PauseMenu.Open();
         }
     }

@@ -9,6 +9,15 @@ namespace LevelManagement
         public void OnResumePressed()
         {
             Time.timeScale = 1;
+
+            // enable player controls
+            Player_Movement playerControls = GameObject.FindObjectOfType<Player_Movement>();
+
+            if (playerControls != null)
+            {
+                playerControls.enabled = true;
+            }
+
             base.OnBackPressed();
         }
 

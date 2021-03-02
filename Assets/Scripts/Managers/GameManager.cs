@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using LevelManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private Player_Movement playerControls;
     [field: SerializeField] public int plaformsNumber { get; private set; }
     [field: SerializeField] public CellType startPlayerType { get; private set; }
     [field: SerializeField] public int totalPoints { get; private set; }
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
+        playerControls = GameObject.FindObjectOfType<Player_Movement>();
     }
 
     private void OnDestroy()
@@ -48,7 +52,26 @@ public class GameManager : MonoBehaviour
     private void EndLevel()
     {
         // disable player controls
+        if (playerControls != null)
+        {
+            playerControls.enabled = false;
+        }
 
         // check if we have set IsGameOver to true, only run this logic once
+        if (!isGameOver)
+        {
+            isGameOver = true;
+            WinScreen.Open();
+        }
+    }
+
+    public void AddPoints()
+    {
+        totalPoints++;
+    }
+
+    public void SubstractPoints()
+    {
+        totalPoints--;
     }
 }
