@@ -3,18 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using System.Linq;
+using UnityEngine.SceneManagement;
 using LevelManagement;
 
 public class GameManager : MonoBehaviour
 {
+    #region Fields
     private Player_Movement playerControls;
-    [field: SerializeField] public int plaformsNumber { get; private set; }
-    [field: SerializeField] public CellType startPlayerType { get; private set; }
-    [field: SerializeField] public int totalPoints { get; private set; }
 
-    public bool isGameOver { get; private set; }
+    [SerializeField] private int objectiveScore = -1; // temp SF
+    [SerializeField] private int currentScore = -1; // temp SF
+    [SerializeField] private CellType startPlayerType = CellType.Ground; // temp SF
 
-    // Singleton
+    [SerializeField] private bool isGameOver;
+    #endregion
+
+
+    #region Properties
+    public int ObjectiveScore { get { return objectiveScore; } }
+    public int CurrentScore { get { return currentScore; } }
+    public CellType StartPlayerType { get { return startPlayerType; } }
+    #endregion
+
+
+
+    #region Singleton + Awake & OnDestroy Logic
     private static GameManager instance;
     public static GameManager Instance { get { return instance; } }
 
@@ -38,12 +52,40 @@ public class GameManager : MonoBehaviour
         {
             instance = null;
         }
+
+        SceneManager.sceneLoaded -= SetScore;
+    }
+    #endregion
+
+    #region Methods
+    private void Start()
+    {
+        SetScore();
+        SceneManager.sceneLoaded += SetScore;
+    }
+
+
+    private void SetScore(Scene scene = default, LoadSceneMode mode = default)
+    {
+        objectiveScore = GameObject.FindObjectsOfType<Cell>().Where(cell => cell.WinType == CellType.Ground).Count();
+        
+        if (objectiveScore > 0)
+        {
+            currentScore = 0;
+        }
+        else
+        {
+            currentScore = -1;
+        }
+
+        isGameOver = false;
+
     }
 
     private void Update()
     {
         // check for game end
-        if (totalPoints == plaformsNumber)
+        if (CurrentScore == ObjectiveScore)
         {
             EndLevel();
         }
@@ -67,11 +109,13 @@ public class GameManager : MonoBehaviour
 
     public void AddPoints()
     {
-        totalPoints++;
+        currentScore++;
     }
 
     public void SubstractPoints()
     {
-        totalPoints--;
+        currentScore--;
     }
+    #endregion
+
 }

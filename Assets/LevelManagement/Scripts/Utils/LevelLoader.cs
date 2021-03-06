@@ -12,7 +12,7 @@ namespace LevelManagement
         public static void ReloadLevel()
         {
             Scene currentScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(currentScene.name);
+            LoadLevel(currentScene.buildIndex);
         }
 
         public static void LoadNextLevel()

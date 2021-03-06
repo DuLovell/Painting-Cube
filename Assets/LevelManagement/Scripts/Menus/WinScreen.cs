@@ -8,8 +8,8 @@ namespace LevelManagement
     {
         public void OnNextPressed()
         {
-            LevelLoader.LoadNextLevel();
             base.OnBackPressed();
+            LevelLoader.LoadNextLevel();
         }
 
         public void OnRestartPressed()

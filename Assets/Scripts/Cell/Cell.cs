@@ -18,6 +18,11 @@ public class Cell : MonoBehaviour
     [SerializeField] private Sprite[] sprites = new Sprite[3];
     #endregion
 
+    #region Properties
+    public CellType SelfType { get { return selfType; } }
+    public CellType WinType { get { return winType; } }
+    #endregion
+
     #region Methods
     private void Awake()
     {
