@@ -31,7 +31,7 @@ TextureImporter:
     second: MainMenu_SettingsMenu_8
   - first:
       213: -3083916884109237583
-    second: MainMenu_SettingsMenu_9
+    second: Toggle_On
   - first:
       213: -7734138457601134266
     second: MainMenu_SettingsMenu_10
@@ -40,16 +40,16 @@ TextureImporter:
     second: Plane_Yellow
   - first:
       213: -5332891367474373315
-    second: MainMenu_SettingsMenu_12
+    second: Toggle
   - first:
       213: -5762589600105635564
-    second: MainMenu_SettingsMenu_13
+    second: Toggle_Off
   - first:
       213: 5451414951536547344
     second: MainMenu_SettingsMenu_14
   - first:
       213: 6144061207695086686
-    second: MainMenu_SettingsMenu_15
+    second: Switch
   - first:
       213: 7287621139800147777
     second: MainMenu_SettingsMenu_16
@@ -441,7 +441,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_9
+      name: Toggle_On
       rect:
         serializedVersion: 2
         x: 1674
@@ -504,7 +504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_12
+      name: Toggle
       rect:
         serializedVersion: 2
         x: 1234
@@ -525,7 +525,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_13
+      name: Toggle_Off
       rect:
         serializedVersion: 2
         x: 1704
@@ -567,7 +567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_15
+      name: Switch
       rect:
         serializedVersion: 2
         x: 1233
