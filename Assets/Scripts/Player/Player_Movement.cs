@@ -9,11 +9,13 @@ public class Player_Movement : MonoBehaviour
     #region Fields
     [SerializeField] private LayerMask blockingLayer;
 
+    SpriteRenderer spriteRenderer;
+
     private PlayerControls inputActions;
 
     private bool isMooving;
     private Vector3 origPos, targetPos;
-    private float timeToMove = 0.2f;
+    [SerializeField] private float timeToMove = 0.2f;
 
     private BoxCollider2D selfCollider;
     
@@ -24,6 +26,7 @@ public class Player_Movement : MonoBehaviour
     {
         inputActions = new PlayerControls();
         selfCollider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable()
@@ -54,6 +57,8 @@ public class Player_Movement : MonoBehaviour
         origPos = transform.position;
         targetPos = origPos + direction;
 
+        FlipXSprite();
+
         hit = Physics2D.Linecast(origPos, targetPos, blockingLayer);
 
         if (hit.collider != null)
@@ -62,6 +67,18 @@ public class Player_Movement : MonoBehaviour
         {
             StartCoroutine(Move(direction));
             return true;
+        }
+    }
+
+    private void FlipXSprite()
+    {
+        if (targetPos.x < origPos.x && spriteRenderer.flipX)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (targetPos.x > origPos.x && !spriteRenderer.flipX)
+        {
+            spriteRenderer.flipX = true;
         }
     }
 
