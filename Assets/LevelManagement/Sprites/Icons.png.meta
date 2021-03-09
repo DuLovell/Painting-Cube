@@ -23,6 +23,9 @@ TextureImporter:
   - first:
       213: 184950751378207249
     second: Icon_LoadNext_Green
+  - first:
+      213: 1202984965197363600
+    second: Icon_Start_Green (Resume)
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -262,6 +265,27 @@ TextureImporter:
       bones: []
       spriteID: 112f6dc7ab3119200800000000000000
       internalID: 184950751378207249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Start_Green (Resume)
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1050
+        width: 104
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09979b0c37cd1b010800000000000000
+      internalID: 1202984965197363600
       vertices: []
       indices: 
       edges: []

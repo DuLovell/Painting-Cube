@@ -10,7 +10,7 @@ TextureImporter:
     second: Atlas_03_Planks_Labels_Stars_1
   - first:
       213: -6540929175742505750
-    second: Atlas_03_Planks_Labels_Stars_2
+    second: Plank_Header_Blue
   - first:
       213: 6433857361032460958
     second: Star_Empty
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_03_Planks_Labels_Stars_2
+      name: Plank_Header_Blue
       rect:
         serializedVersion: 2
         x: 3
