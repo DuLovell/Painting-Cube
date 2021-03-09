@@ -22,7 +22,7 @@ TextureImporter:
     second: Icon_Reload
   - first:
       213: 184950751378207249
-    second: Icon_LoadNext
+    second: Icon_LoadNext_Green
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -246,7 +246,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icon_LoadNext
+      name: Icon_LoadNext_Green
       rect:
         serializedVersion: 2
         x: 522

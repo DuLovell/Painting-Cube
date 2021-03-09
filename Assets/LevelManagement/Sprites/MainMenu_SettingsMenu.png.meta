@@ -819,27 +819,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Plane_ButtonBackground_Green
-      rect:
-        serializedVersion: 2
-        x: 174
-        y: 345
-        width: 116
-        height: 110
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10d1efe0415c7e940800000000000000
-      internalID: 5325441774330453249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: MainMenu_SettingsMenu_28
       rect:
         serializedVersion: 2
