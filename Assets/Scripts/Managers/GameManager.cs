@@ -42,8 +42,6 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-
-        playerControls = GameObject.FindObjectOfType<Player_Movement>();
     }
 
     private void OnDestroy()
@@ -67,6 +65,14 @@ public class GameManager : MonoBehaviour
 
     private void SetScore(Scene scene = default, LoadSceneMode mode = default)
     {
+        // Обновлять данные только при загрузке игровых сцен, MainMenu туда не входит
+        if (scene.name == "MainMenu")
+        {
+            return;
+        }
+
+        playerControls = GameObject.FindObjectOfType<Player_Movement>();
+
         objectiveScore = GameObject.FindObjectsOfType<Cell>().Where(cell => cell.WinType == CellType.Ground).Count();
         
         if (objectiveScore > 0)
@@ -85,7 +91,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         // check for game end
-        if (CurrentScore == ObjectiveScore)
+        if (CurrentScore == ObjectiveScore || playerControls == null)
         {
             EndLevel();
         }
@@ -103,7 +109,15 @@ public class GameManager : MonoBehaviour
         if (!isGameOver)
         {
             isGameOver = true;
-            WinScreen.Open();
+            if (playerControls == null)
+            {
+                LoseScreen.Open();
+            }
+            else
+            {
+                WinScreen.Open();
+            }
+            
         }
     }
 

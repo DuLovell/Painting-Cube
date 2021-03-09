@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using LevelManagement;
 
 public class Player : MonoBehaviour
 {
@@ -12,6 +13,4 @@ public class Player : MonoBehaviour
     {
         type = GameManager.Instance.StartPlayerType; 
     }
-
-
 }

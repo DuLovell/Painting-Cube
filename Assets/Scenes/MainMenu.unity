@@ -278,6 +278,8 @@ MonoBehaviour:
     type: 3}
   winScreenPrefab: {fileID: 4220796358028416024, guid: 5eb244c9d2506e9418483db42a3d1bf4,
     type: 3}
+  loseScreenPrefab: {fileID: 8761114634674919607, guid: 5cfc6f3d99179264eb5ade29da5f3eb0,
+    type: 3}
   menuParent: {fileID: 0}
 --- !u!4 &1424834186
 Transform:

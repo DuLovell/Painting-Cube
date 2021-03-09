@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: 1202984965197363600
     second: Icon_Start_Green (Resume)
+  - first:
+      213: 5543941588292853863
+    second: Icon_LeaderBoard
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -286,6 +289,27 @@ TextureImporter:
       bones: []
       spriteID: 09979b0c37cd1b010800000000000000
       internalID: 1202984965197363600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_LeaderBoard
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1577
+        width: 155
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760e5b1608900fc40800000000000000
+      internalID: 5543941588292853863
       vertices: []
       indices: 
       edges: []
