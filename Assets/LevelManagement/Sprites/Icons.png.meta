@@ -1,22 +1,28 @@
 fileFormatVersion: 2
-guid: 54bf0e9d35d2d2c4ebd13696167adbf4
+guid: 4208daec78c0d1d49a3b1db06c83e0fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4087250592909724703
-    second: Plank_Default_1
+      213: -1022214139464012348
+    second: Icon_Music
   - first:
-      213: -7238618520601701902
-    second: Plank_Default_2
+      213: -7115283200650967053
+    second: Icon_Sound
   - first:
-      213: -202753474371578227
-    second: Plank_Default_3
+      213: -9183588166827575354
+    second: Icon_Language
   - first:
-      213: -6662884012849861049
-    second: Plank_Default_4
+      213: 7051558803517251533
+    second: Icon_Pause
   - first:
-      213: -4739651515949078264
-    second: Plank_Default_5
+      213: 1161201145128540330
+    second: Icon_LevelSelection
+  - first:
+      213: 2130535880278150251
+    second: Icon_Reload
+  - first:
+      213: 184950751378207249
+    second: Icon_LoadNext
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,106 +120,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Plank_Default_1
+      name: Icon_Music
       rect:
         serializedVersion: 2
-        x: 9
-        y: 1448
-        width: 1919
-        height: 404
+        x: 698
+        y: 1555
+        width: 128
+        height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1c836252c4d8b830800000000000000
-      internalID: 4087250592909724703
+      spriteID: 4cdadd4f7ad50d1f0800000000000000
+      internalID: -1022214139464012348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Plank_Default_2
+      name: Icon_Sound
       rect:
         serializedVersion: 2
-        x: 35
-        y: 1066
-        width: 1918
-        height: 370
+        x: 1885
+        y: 1566
+        width: 141
+        height: 108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f1d8feaec24b8b90800000000000000
-      internalID: -7238618520601701902
+      spriteID: 3f705ec90af614d90800000000000000
+      internalID: -7115283200650967053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Plank_Default_3
+      name: Icon_Language
       rect:
         serializedVersion: 2
-        x: 4
-        y: 687
-        width: 1910
-        height: 371
+        x: 356
+        y: 1393
+        width: 137
+        height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d861b1f0accaf2df0800000000000000
-      internalID: -202753474371578227
+      spriteID: 6c7f2c018375d8080800000000000000
+      internalID: -9183588166827575354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Plank_Default_4
+      name: Icon_Pause
       rect:
         serializedVersion: 2
-        x: 76
-        y: 353
-        width: 1815
-        height: 325
+        x: 1229
+        y: 1744
+        width: 93
+        height: 101
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74e6472ba4ea883a0800000000000000
-      internalID: -6662884012849861049
+      spriteID: dcf9c6cfe5b2cd160800000000000000
+      internalID: 7051558803517251533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Plank_Default_5
+      name: Icon_LevelSelection
       rect:
         serializedVersion: 2
-        x: 68
-        y: 6
-        width: 1881
-        height: 338
+        x: 186
+        y: 1917
+        width: 138
+        height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 809a6b8de00693eb0800000000000000
-      internalID: -4739651515949078264
+      spriteID: aa8d9280a4a6d1010800000000000000
+      internalID: 1161201145128540330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Reload
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1896
+        width: 136
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c0435581f219d10800000000000000
+      internalID: 2130535880278150251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_LoadNext
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1067
+        width: 148
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112f6dc7ab3119200800000000000000
+      internalID: 184950751378207249
       vertices: []
       indices: 
       edges: []

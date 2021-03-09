@@ -13,7 +13,7 @@ TextureImporter:
     second: MainMenu_SettingsMenu_2
   - first:
       213: -4537782869067542709
-    second: MainMenu_SettingsMenu_3
+    second: Plane_ButtonBackground
   - first:
       213: 1736381122025484572
     second: MainMenu_SettingsMenu_4
@@ -85,13 +85,13 @@ TextureImporter:
     second: MainMenu_SettingsMenu_26
   - first:
       213: 5325441774330453249
-    second: MainMenu_SettingsMenu_27
+    second: Plane_ButtonBackground_Green
   - first:
       213: 6922366944155166455
     second: MainMenu_SettingsMenu_28
   - first:
       213: 5805062467755483428
-    second: MainMenu_SettingsMenu_29
+    second: Icon_Heart
   - first:
       213: -7412299017772613287
     second: MainMenu_SettingsMenu_30
@@ -127,7 +127,7 @@ TextureImporter:
     second: MainMenu_SettingsMenu_40
   - first:
       213: 2815921278410318328
-    second: MainMenu_SettingsMenu_41
+    second: Icon_Timer
   - first:
       213: -6391677011565256314
     second: MainMenu_SettingsMenu_42
@@ -142,10 +142,10 @@ TextureImporter:
     second: MainMenu_SettingsMenu_45
   - first:
       213: -7754498522788393327
-    second: MainMenu_SettingsMenu_46
+    second: Icon_Badge
   - first:
       213: -7450560714786624141
-    second: MainMenu_SettingsMenu_47
+    second: Icon_Coin
   - first:
       213: 4491359865503527133
     second: MainMenu_SettingsMenu_48
@@ -154,7 +154,7 @@ TextureImporter:
     second: MainMenu_SettingsMenu_49
   - first:
       213: 5165977452405420189
-    second: MainMenu_SettingsMenu_50
+    second: Plane_Completed
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -315,7 +315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_3
+      name: Plane_ButtonBackground
       rect:
         serializedVersion: 2
         x: 1840
@@ -819,7 +819,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_27
+      name: Plane_ButtonBackground_Green
       rect:
         serializedVersion: 2
         x: 174
@@ -861,7 +861,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_29
+      name: Icon_Heart
       rect:
         serializedVersion: 2
         x: 3
@@ -1113,7 +1113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_41
+      name: Icon_Timer
       rect:
         serializedVersion: 2
         x: 815
@@ -1218,7 +1218,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_46
+      name: Icon_Badge
       rect:
         serializedVersion: 2
         x: 815
@@ -1239,7 +1239,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_47
+      name: Icon_Coin
       rect:
         serializedVersion: 2
         x: 952
@@ -1302,7 +1302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_50
+      name: Plane_Completed
       rect:
         serializedVersion: 2
         x: 1671

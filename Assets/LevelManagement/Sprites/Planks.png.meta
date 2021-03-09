@@ -1,16 +1,31 @@
 fileFormatVersion: 2
-guid: 4208daec78c0d1d49a3b1db06c83e0fd
+guid: 54bf0e9d35d2d2c4ebd13696167adbf4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1022214139464012348
-    second: Music_Icon
+      213: 4087250592909724703
+    second: Plank_Default_1
   - first:
-      213: -7115283200650967053
-    second: Sound_Icon
+      213: -7238618520601701902
+    second: Plank_Default_2
   - first:
-      213: -9183588166827575354
-    second: Language_Icon
+      213: -202753474371578227
+    second: Plank_Default_3
+  - first:
+      213: -6662884012849861049
+    second: Plank_Default_4
+  - first:
+      213: -4739651515949078264
+    second: Plank_Default_5
+  - first:
+      213: -3671729575880173466
+    second: Dot_Big
+  - first:
+      213: 1960578510203912994
+    second: Dot_Small
+  - first:
+      213: 7269338451630584720
+    second: Plank_Info
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Music_Icon
+      name: Plank_Default_1
       rect:
         serializedVersion: 2
-        x: 698
-        y: 1555
-        width: 128
-        height: 132
+        x: 9
+        y: 1448
+        width: 1919
+        height: 404
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cdadd4f7ad50d1f0800000000000000
-      internalID: -1022214139464012348
+      spriteID: f1c836252c4d8b830800000000000000
+      internalID: 4087250592909724703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sound_Icon
+      name: Plank_Default_2
       rect:
         serializedVersion: 2
-        x: 1885
-        y: 1566
-        width: 141
-        height: 108
+        x: 35
+        y: 1066
+        width: 1918
+        height: 370
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +158,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f705ec90af614d90800000000000000
-      internalID: -7115283200650967053
+      spriteID: 2f1d8feaec24b8b90800000000000000
+      internalID: -7238618520601701902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Language_Icon
+      name: Plank_Default_3
       rect:
         serializedVersion: 2
-        x: 356
-        y: 1393
-        width: 137
-        height: 113
+        x: 4
+        y: 687
+        width: 1910
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d861b1f0accaf2df0800000000000000
+      internalID: -202753474371578227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plank_Default_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 353
+        width: 1815
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e6472ba4ea883a0800000000000000
+      internalID: -6662884012849861049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plank_Default_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 6
+        width: 1881
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809a6b8de00693eb0800000000000000
+      internalID: -4739651515949078264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dot_Big
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1870
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668dd5687656b0dc0800000000000000
+      internalID: -3671729575880173466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dot_Small
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1891
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22308f674cf553b10800000000000000
+      internalID: 1960578510203912994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plank_Info
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1941
+        width: 289
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c7f2c018375d8080800000000000000
-      internalID: -9183588166827575354
+      spriteID: 0937781aec0e1e460800000000000000
+      internalID: 7269338451630584720
       vertices: []
       indices: 
       edges: []
