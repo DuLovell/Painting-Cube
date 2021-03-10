@@ -12,6 +12,12 @@ namespace LevelManagement
 
         private int mainMenuIndex = 0;
 
+        private float beforeLoadDelay = 0.5f;
+        private float afterLoadDelay = 0.3f;
+
+        //public float BeforeLoadDelay { get { return beforeLoadDelay; } }
+        //public float AfterLoadDelay { get { return afterLoadDelay; } }
+
         #region Singleton
         private static LevelLoader instance;
         public static LevelLoader Instance { get { return instance; } }
@@ -41,7 +47,7 @@ namespace LevelManagement
         {
             LoadingScreen loadingScreenInstance = Instantiate(loadingScreenPrefab);
 
-            yield return new WaitForSeconds(0.5f); // Искусственное замедление загрузки
+            yield return new WaitForSeconds(beforeLoadDelay); // Искусственное замедление загрузки
             
             AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
             
@@ -54,7 +60,7 @@ namespace LevelManagement
                 yield return null;
             }
 
-            yield return new WaitForSeconds(0.3f); // Искусственное замедление загрузки
+            yield return new WaitForSeconds(afterLoadDelay); // Искусственное замедление загрузки
             Destroy(loadingScreenInstance.gameObject);
         }
 

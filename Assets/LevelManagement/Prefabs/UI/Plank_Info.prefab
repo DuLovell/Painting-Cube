@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 2486329200095830332}
   - component: {fileID: 3938072174326617793}
   m_Layer: 5
-  m_Name: Text
+  m_Name: LevelTimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

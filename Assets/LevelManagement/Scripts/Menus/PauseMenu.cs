@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace LevelManagement
 {
     public class PauseMenu : Menu<PauseMenu>
     {
+        #region Methods
+
         public void OnResumePressed()
         {
             Time.timeScale = 1;
@@ -32,7 +35,8 @@ namespace LevelManagement
         {
             Time.timeScale = 1;
             LevelLoader.Instance.LoadMainMenuLevel();
-        }
+        } 
+        #endregion
     }
 }
 

@@ -10,6 +10,11 @@ namespace LevelManagement
         [SerializeField] private Text groundCellsText;
         [SerializeField] private Text grassCellsText;
 
+        private void Update()
+        {
+            levelTimerText.text = LevelTimer.MinutesSinceStart + ":" + LevelTimer.SecondsSinceStart.ToString("00");
+        }
+
         public void OnPausePressed()
         {
             Time.timeScale = 0;

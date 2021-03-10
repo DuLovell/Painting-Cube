@@ -22,8 +22,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentGroundCells;
 
     [SerializeField] private int totalGrassCells;
-    [SerializeField] private int currentGrassCells; 
+    [SerializeField] private int currentGrassCells;
     #endregion
+
 
 
     [SerializeField] private CellType startPlayerType = CellType.Ground;
@@ -37,15 +38,17 @@ public class GameManager : MonoBehaviour
     #region Properties
 
     #region Score
+
     public int ObjectiveScore { get { return objectiveScore; } }
-    public int CurrentScore { get { return currentScore; } } 
+    public int CurrentScore { get { return currentScore; } }
     #endregion
 
     #region Cells
+
     public int TotalGroundCells { get { return totalGroundCells; } }
     public int CurrentGroundCells { get { return currentGroundCells; } }
     public int TotalGrassCells { get { return totalGrassCells; } }
-    public int CurrentGrassCells { get { return currentGrassCells; } } 
+    public int CurrentGrassCells { get { return currentGrassCells; } }
     #endregion
 
     public CellType StartPlayerType { get { return startPlayerType; } }

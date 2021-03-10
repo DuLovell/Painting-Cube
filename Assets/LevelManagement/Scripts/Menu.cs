@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace LevelManagement
 {
     public abstract class Menu<T> : Menu where T: Menu<T>
     {
+        [SerializeField] protected Text levelTimerText;
+
+        #region Singleton
         private static T instance;
         public static T Instance { get { return instance; } }
 
@@ -26,6 +30,15 @@ namespace LevelManagement
             if (instance == this)
             {
                 instance = null;
+            }
+        } 
+        #endregion
+
+        private void OnEnable()
+        {
+            if (levelTimerText != null)
+            {
+                levelTimerText.text = LevelTimer.MinutesSinceStart + ":" + LevelTimer.SecondsSinceStart.ToString("00");
             }
         }
 
