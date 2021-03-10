@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     private Player_Movement playerControls;
 
     #region Score
-    [SerializeField] private int objectiveScore; // temp SF
-    [SerializeField] private int currentScore; // temp SF 
+    [SerializeField] private int objectiveScore;
+    [SerializeField] private int currentScore;
     #endregion
 
     #region Cells
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
 
-    [SerializeField] private CellType startPlayerType = CellType.Ground; // temp SF
+    [SerializeField] private CellType startPlayerType = CellType.Ground;
 
     [SerializeField] private bool isGameOver;
 
