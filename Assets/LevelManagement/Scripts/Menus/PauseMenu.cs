@@ -24,14 +24,14 @@ namespace LevelManagement
         public void OnRestartPressed()
         {
             Time.timeScale = 1;
-            LevelLoader.ReloadLevel();
+            LevelLoader.Instance.ReloadLevel();
             base.OnBackPressed();
         }
 
         public void OnMainMenuPressed()
         {
             Time.timeScale = 1;
-            LevelLoader.LoadMainMenuLevel();
+            LevelLoader.Instance.LoadMainMenuLevel();
         }
     }
 }

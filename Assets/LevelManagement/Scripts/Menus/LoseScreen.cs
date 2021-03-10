@@ -9,13 +9,13 @@ namespace LevelManagement
         public void OnMainMenuPressed()
         {
             base.OnBackPressed();
-            LevelLoader.LoadMainMenuLevel();
+            LevelLoader.Instance.LoadMainMenuLevel();
         }
 
         public void OnRestartPressed()
         {
             base.OnBackPressed();
-            LevelLoader.ReloadLevel();
+            LevelLoader.Instance.ReloadLevel();
         }
 
         public void OnLeaderboardPressed()

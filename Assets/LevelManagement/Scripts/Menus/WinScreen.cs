@@ -9,18 +9,18 @@ namespace LevelManagement
         public void OnNextPressed()
         {
             base.OnBackPressed();
-            LevelLoader.LoadNextLevel();
+            LevelLoader.Instance.LoadNextLevel();
         }
 
         public void OnRestartPressed()
         {
-            LevelLoader.ReloadLevel();
+            LevelLoader.Instance.ReloadLevel();
             base.OnBackPressed();
         }
 
         public void OnMainMenuPressed()
         {
-            LevelLoader.LoadMainMenuLevel();
+            LevelLoader.Instance.LoadMainMenuLevel();
         }
     }
 }

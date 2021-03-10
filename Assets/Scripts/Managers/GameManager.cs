@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private bool isGameOver;
 
-    private string[] blockingScenes = new string[] { "MainMenu" };
+    private int[] blockingScenes = new int[] { (int)SceneIndexes.MAIN_MENU };
     #endregion
 
 
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
     private void SetScore(Scene scene = default, LoadSceneMode mode = default)
     {
         // Обновлять данные только при загрузке игровых сцен
-        if (blockingScenes.Contains(scene.name))
+        if (blockingScenes.Contains(scene.buildIndex))
         {
             return;
         }
@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         // check for game end
-        if (CurrentScore == ObjectiveScore || (!blockingScenes.Contains(SceneManager.GetActiveScene().name) && playerControls == null))
+        if (CurrentScore == ObjectiveScore || (!blockingScenes.Contains(SceneManager.GetActiveScene().buildIndex) && playerControls == null))
         {
             EndLevel();
         }

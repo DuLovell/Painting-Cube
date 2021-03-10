@@ -2,20 +2,69 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace LevelManagement
 {
     public class LevelLoader : MonoBehaviour
     {
-        private static int mainMenuIndex = 0;
+        [SerializeField] private LoadingScreen loadingScreenPrefab;
 
-        public static void ReloadLevel()
+        private int mainMenuIndex = 0;
+
+        #region Singleton
+        private static LevelLoader instance;
+        public static LevelLoader Instance { get { return instance; } }
+
+        private void Awake()
+        {
+            if (instance != null)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                instance = this;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (instance == this)
+            {
+                instance = null;
+            }
+        } 
+        #endregion
+
+        private IEnumerator LoadAsynchronously(int levelIndex)
+        {
+            LoadingScreen loadingScreenInstance = Instantiate(loadingScreenPrefab);
+
+            yield return new WaitForSeconds(0.5f); // Искусственное замедление загрузки
+            
+            AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
+            
+            while (!operation.isDone)
+            {
+                float progress = Mathf.Clamp01(operation.progress / 0.9f);
+                loadingScreenInstance.Fill.fillAmount = progress;
+                loadingScreenInstance.StatusText.text = $"{(int)progress * 100}%";
+
+                yield return null;
+            }
+
+            yield return new WaitForSeconds(0.3f); // Искусственное замедление загрузки
+            Destroy(loadingScreenInstance.gameObject);
+        }
+
+        public void ReloadLevel()
         {
             Scene currentScene = SceneManager.GetActiveScene();
             LoadLevel(currentScene.buildIndex);
         }
 
-        public static void LoadNextLevel()
+        public void LoadNextLevel()
         {
             int levelsNumber = SceneManager.sceneCountInBuildSettings;
             Scene level = SceneManager.GetActiveScene();
@@ -23,7 +72,7 @@ namespace LevelManagement
             LoadLevel(nextLevelIndex);
         }
 
-        public static void LoadLevel(int levelIndex)
+        public void LoadLevel(int levelIndex)
         {
             if (levelIndex >= 0 && levelIndex < SceneManager.sceneCountInBuildSettings)
             {
@@ -32,7 +81,13 @@ namespace LevelManagement
                     MainMenu.Open();
                 }
 
-                SceneManager.LoadScene(levelIndex);
+                // NEW ---------------------
+
+                // NEW_END ---------------------
+
+                //SceneManager.LoadScene(levelIndex);
+
+                StartCoroutine(LoadAsynchronously(levelIndex));
             }
             else
             {
@@ -40,7 +95,7 @@ namespace LevelManagement
             }
         }
 
-        public static void LoadMainMenuLevel()
+        public void LoadMainMenuLevel()
         {
             LoadLevel(mainMenuIndex);
         }
