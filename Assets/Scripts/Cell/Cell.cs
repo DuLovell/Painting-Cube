@@ -38,7 +38,7 @@ public class Cell : MonoBehaviour
     {
         if (selfType == winType)
             isWinType = true;
-        else
+        else if (selfType != CellType.Seeds)
             isWinType = false;
     }
 
@@ -67,18 +67,24 @@ public class Cell : MonoBehaviour
     {
         selfType = cellType;
         spriteRendererSelf.sprite = sprites[(int)selfType];
-        ManageChangeInType();
+        
+        if (cellType != CellType.Seeds)
+        {
+            ManageChangeInType();
+        }
+        
     }
 
     private void ManageChangeInType()
     {
+
         if (!isWinType && selfType == winType)
         {
-            GameManager.Instance.AddPoints();
+            GameManager.Instance.AddPoints(winType);
         }
         else if (isWinType && selfType != winType)
         {
-            GameManager.Instance.SubstractPoints();
+            GameManager.Instance.SubstractPoints(winType);
         }
     }
     #endregion

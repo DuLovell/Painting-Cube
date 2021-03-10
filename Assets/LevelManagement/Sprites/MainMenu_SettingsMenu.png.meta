@@ -88,7 +88,7 @@ TextureImporter:
     second: Plane_ButtonBackground_Green
   - first:
       213: 6922366944155166455
-    second: MainMenu_SettingsMenu_28
+    second: Plank_GameMenu
   - first:
       213: 5805062467755483428
     second: Icon_Heart
@@ -121,10 +121,10 @@ TextureImporter:
     second: MainMenu_SettingsMenu_38
   - first:
       213: -4746669133414850189
-    second: MainMenu_SettingsMenu_39
+    second: Icon_GrassCell
   - first:
       213: 862186841926127909
-    second: MainMenu_SettingsMenu_40
+    second: Icon_GroundCell
   - first:
       213: 2815921278410318328
     second: Icon_Timer
@@ -819,7 +819,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_28
+      name: Plank_GameMenu
       rect:
         serializedVersion: 2
         x: 299
@@ -1050,7 +1050,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_39
+      name: Icon_GrassCell
       rect:
         serializedVersion: 2
         x: 227
@@ -1071,7 +1071,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_40
+      name: Icon_GroundCell
       rect:
         serializedVersion: 2
         x: 330
