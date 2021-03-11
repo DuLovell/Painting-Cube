@@ -8,6 +8,7 @@ namespace LevelManagement
     public abstract class Menu<T> : Menu where T: Menu<T>
     {
         [SerializeField] protected Text levelTimerText;
+        [SerializeField] private GameObject[] stars = new GameObject[4];
 
         #region Singleton
         private static T instance;
@@ -39,6 +40,25 @@ namespace LevelManagement
             if (levelTimerText != null)
             {
                 levelTimerText.text = LevelTimer.MinutesSinceStart + ":" + LevelTimer.SecondsSinceStart.ToString("00");
+            }
+
+            for (int starIndex = 0; starIndex < GameManager.Instance.StarsCollected; starIndex++)
+            {
+                if (stars[starIndex] != null)
+                {
+                    stars[starIndex].SetActive(true);
+                }
+            }
+        }
+
+        private void OnDisable()
+        {
+            for (int starIndex = 0; starIndex < GameManager.Instance.StarsCollected; starIndex++)
+            {
+                if (stars[starIndex] != null)
+                {
+                    stars[starIndex].SetActive(false);
+                }
             }
         }
 

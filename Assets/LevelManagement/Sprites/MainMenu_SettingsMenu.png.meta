@@ -34,7 +34,7 @@ TextureImporter:
     second: Toggle_On
   - first:
       213: -7734138457601134266
-    second: MainMenu_SettingsMenu_10
+    second: PickupItem_Star
   - first:
       213: -1300227218428432985
     second: Plane_Yellow
@@ -462,7 +462,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu_SettingsMenu_10
+      name: PickupItem_Star
       rect:
         serializedVersion: 2
         x: 1910

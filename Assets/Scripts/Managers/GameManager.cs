@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentScore;
     #endregion
 
+    [SerializeField] private int starsCollected;
+
     #region Cells
     [SerializeField] private int totalGroundCells;
     [SerializeField] private int currentGroundCells;
@@ -42,6 +44,8 @@ public class GameManager : MonoBehaviour
     public int ObjectiveScore { get { return objectiveScore; } }
     public int CurrentScore { get { return currentScore; } }
     #endregion
+
+    public int StarsCollected { get { return starsCollected; } set { starsCollected = value; } }
 
     #region Cells
 
@@ -121,6 +125,7 @@ public class GameManager : MonoBehaviour
         }
 
         GameMenu.Instance.RefreshCounters();
+        starsCollected = 0; // TO DELETE
 
         isGameOver = false;
 
