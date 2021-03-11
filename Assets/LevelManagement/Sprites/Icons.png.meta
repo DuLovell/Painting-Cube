@@ -29,6 +29,9 @@ TextureImporter:
   - first:
       213: 5543941588292853863
     second: Icon_LeaderBoard
+  - first:
+      213: -1863859237976802683
+    second: Icon_Reload_Green
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -302,7 +305,7 @@ TextureImporter:
         width: 155
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -310,6 +313,27 @@ TextureImporter:
       bones: []
       spriteID: 760e5b1608900fc40800000000000000
       internalID: 5543941588292853863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Reload_Green
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1046
+        width: 137
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58aff01f5ed3226e0800000000000000
+      internalID: -1863859237976802683
       vertices: []
       indices: 
       edges: []

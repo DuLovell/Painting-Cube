@@ -17,7 +17,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentScore;
     #endregion
 
+    #region LevelObjectives
+    [SerializeField] private int secondsObjective;
+    [SerializeField] private int minutesObjective;
+
+    [SerializeField] private int starsObjective;
     [SerializeField] private int starsCollected;
+    #endregion
 
     #region Cells
     [SerializeField] private int totalGroundCells;
@@ -27,13 +33,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentGrassCells;
     #endregion
 
-
-
     [SerializeField] private CellType startPlayerType = CellType.Ground;
 
     [SerializeField] private bool isGameOver;
-
-    private int[] blockingScenes = new int[] { (int)SceneIndexes.MAIN_MENU };
     #endregion
 
 
@@ -82,8 +84,6 @@ public class GameManager : MonoBehaviour
         {
             instance = null;
         }
-
-        SceneManager.sceneLoaded -= SetScore;
     }
     #endregion
 
@@ -91,18 +91,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         SetScore();
-        SceneManager.sceneLoaded += SetScore;
     }
 
 
     private void SetScore(Scene scene = default, LoadSceneMode mode = default)
     {
-        // Обновлять данные только при загрузке игровых сцен
-        if (blockingScenes.Contains(scene.buildIndex))
-        {
-            return;
-        }
-
         playerControls = GameObject.FindObjectOfType<Player_Movement>();
 
         #region Cells
@@ -125,16 +118,12 @@ public class GameManager : MonoBehaviour
         }
 
         GameMenu.Instance.RefreshCounters();
-        starsCollected = 0; // TO DELETE
-
-        isGameOver = false;
-
     }
 
     private void Update()
     {
         // check for game end
-        if (CurrentScore == ObjectiveScore || (!blockingScenes.Contains(SceneManager.GetActiveScene().buildIndex) && playerControls == null))
+        if (CurrentScore == ObjectiveScore || playerControls == null)
         {
             EndLevel();
         }
@@ -152,6 +141,13 @@ public class GameManager : MonoBehaviour
         if (!isGameOver)
         {
             isGameOver = true;
+
+            if (LevelTimer.SecondsSinceStart <= secondsObjective && LevelTimer.MinutesSinceStart <= minutesObjective)
+            {
+                starsCollected++;
+            }
+
+            // if player is dead open LoseScreen
             if (playerControls == null)
             {
                 LoseScreen.Open();

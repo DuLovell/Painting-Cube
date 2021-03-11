@@ -42,24 +42,32 @@ namespace LevelManagement
                 levelTimerText.text = LevelTimer.MinutesSinceStart + ":" + LevelTimer.SecondsSinceStart.ToString("00");
             }
 
-            for (int starIndex = 0; starIndex < GameManager.Instance.StarsCollected; starIndex++)
+            if (GameManager.Instance != null)
             {
-                if (stars[starIndex] != null)
+                for (int starIndex = 0; starIndex < GameManager.Instance.StarsCollected; starIndex++)
                 {
-                    stars[starIndex].SetActive(true);
+                    if (stars[starIndex] != null)
+                    {
+                        stars[starIndex].SetActive(true);
+                    }
                 }
             }
+            
         }
 
         private void OnDisable()
         {
-            for (int starIndex = 0; starIndex < GameManager.Instance.StarsCollected; starIndex++)
+            if (GameManager.Instance != null)
             {
-                if (stars[starIndex] != null)
+                for (int starIndex = 0; starIndex < GameManager.Instance.StarsCollected; starIndex++)
                 {
-                    stars[starIndex].SetActive(false);
+                    if (stars[starIndex] != null)
+                    {
+                        stars[starIndex].SetActive(false);
+                    }
                 }
             }
+            
         }
 
         public static void Open()
