@@ -142,7 +142,7 @@ public class GameManager : MonoBehaviour
         {
             isGameOver = true;
 
-            if (LevelTimer.SecondsSinceStart <= secondsObjective && LevelTimer.MinutesSinceStart <= minutesObjective)
+            if (playerControls != null && LevelTimer.SecondsSinceStart <= secondsObjective && LevelTimer.MinutesSinceStart <= minutesObjective)
             {
                 starsCollected++;
             }
