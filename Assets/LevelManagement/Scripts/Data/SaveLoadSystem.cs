@@ -10,14 +10,42 @@ namespace LevelManagement.Data
     {
         public static void SaveLevelData(LevelData level)
         {
+            PlayerData data = LoadPlayerData();
+
             BinaryFormatter formatter = new BinaryFormatter();
             string path = Path.Combine(Application.persistentDataPath, "playerData.fun");
             FileStream stream = new FileStream(path, FileMode.Create);
 
-            PlayerData data = new PlayerData(level);
+            if (data == null)
+            {
+                data = new PlayerData();
+            }
+
+            data.UpdateData(level);
 
             formatter.Serialize(stream, data);
             stream.Close();
+        }
+
+        public static PlayerData LoadPlayerData()
+        {
+            string path = Path.Combine(Application.persistentDataPath, "playerData.fun");
+
+            if (File.Exists(path))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                FileStream stream = new FileStream(path, FileMode.Open);
+
+                PlayerData data = formatter.Deserialize(stream) as PlayerData;
+
+                stream.Close();
+                return data;
+            }
+            else
+            {
+                Debug.LogError("Save file not found in " + path);
+                return null;
+            }
         }
 
         public static LevelData LoadLevelData(int levelId)
@@ -31,9 +59,9 @@ namespace LevelManagement.Data
 
                 PlayerData data = formatter.Deserialize(stream) as PlayerData;
 
-                Debug.Log(levelId);
                 LevelData levelData = data.levelsData[levelId];
 
+                stream.Close();
                 return levelData;
             }
             else
@@ -41,8 +69,6 @@ namespace LevelManagement.Data
                 Debug.LogError("Save file not found in " + path);
                 return null;
             }
-
-
         }
     }
 }

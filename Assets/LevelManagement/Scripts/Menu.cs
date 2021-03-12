@@ -55,19 +55,17 @@ namespace LevelManagement
             
         }
 
-        private void OnDisable()
+        protected virtual void OnDisable()
         {
-            if (GameManager.Instance != null)
+            int starsTotal = 4;
+
+            for (int starIndex = 0; starIndex < starsTotal; starIndex++)
             {
-                for (int starIndex = 0; starIndex < GameManager.Instance.StarsCollected; starIndex++)
+                if (stars[starIndex] != null)
                 {
-                    if (stars[starIndex] != null)
-                    {
-                        stars[starIndex].SetActive(false);
-                    }
+                    stars[starIndex].SetActive(false);
                 }
             }
-            
         }
 
         public static void Open(int levelId = -1)

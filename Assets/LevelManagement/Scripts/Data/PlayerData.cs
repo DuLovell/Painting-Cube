@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine;
 
 namespace LevelManagement.Data
 {
@@ -27,11 +28,11 @@ namespace LevelManagement.Data
     }
 
     [Serializable]
-    public class PlayerData
+    public  class PlayerData
     {
-        public Dictionary<int, LevelData> levelsData = new Dictionary<int, LevelData>(); // информация о каждом уровне
+        public  Dictionary<int, LevelData> levelsData = new Dictionary<int, LevelData>(); // информация о каждом уровне
 
-        private void CompareLevelData(LevelData level)
+        private  void CompareLevelData(LevelData level)
         {
             LevelData oldLevelData = levelsData[level.id];
 
@@ -47,14 +48,16 @@ namespace LevelManagement.Data
             }
         }
 
-        public PlayerData(LevelData level)
+        public void UpdateData (LevelData level)
         {
             if (levelsData.ContainsKey(level.id))
             {
+                Debug.Log("contains key");
                 CompareLevelData(level);
             }
             else
             {
+                Debug.Log("not contains key");
                 levelsData.Add(level.id, level);
             }
         }
