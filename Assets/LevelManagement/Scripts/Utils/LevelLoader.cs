@@ -59,6 +59,7 @@ namespace LevelManagement
             }
 
             yield return new WaitForSeconds(afterLoadDelay); // Искусственное замедление загрузки
+
             Destroy(loadingScreenInstance.gameObject);
         }
 

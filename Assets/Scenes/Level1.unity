@@ -4095,6 +4095,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 795869473282012453, guid: eff25a436ae10d4468505c691e9ce76f,
         type: 3}
+      propertyPath: levelId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 795869473282012453, guid: eff25a436ae10d4468505c691e9ce76f,
+        type: 3}
       propertyPath: starsObjective
       value: 3
       objectReference: {fileID: 0}

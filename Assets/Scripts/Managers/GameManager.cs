@@ -6,11 +6,12 @@ using System;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using LevelManagement;
+using LevelManagement.Data;
 
 public class GameManager : MonoBehaviour
 {
     #region Fields
-    private Player_Movement playerControls;
+    [SerializeField] private int levelId;
 
     #region Score
     [SerializeField] private int objectiveScore;
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CellType startPlayerType = CellType.Ground;
 
     [SerializeField] private bool isGameOver;
+
+    private Player_Movement playerControls;
     #endregion
 
 
@@ -142,8 +145,9 @@ public class GameManager : MonoBehaviour
         {
             isGameOver = true;
 
-            if (playerControls != null && LevelTimer.SecondsSinceStart <= secondsObjective && LevelTimer.MinutesSinceStart <= minutesObjective)
+            if (playerControls != null && starsCollected == 3 && LevelTimer.SecondsSinceStart <= secondsObjective && LevelTimer.MinutesSinceStart <= minutesObjective)
             {
+                Debug.Log("got here");
                 starsCollected++;
             }
 
@@ -154,6 +158,8 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                SaveLoadSystem.SaveLevelData(new LevelData(levelId, true, starsCollected, LevelTimer.SecondsSinceStart, LevelTimer.MinutesSinceStart));
+
                 WinScreen.Open();
             }
             

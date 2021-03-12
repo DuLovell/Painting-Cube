@@ -8,7 +8,7 @@ namespace LevelManagement
     public abstract class Menu<T> : Menu where T: Menu<T>
     {
         [SerializeField] protected Text levelTimerText;
-        [SerializeField] private GameObject[] stars = new GameObject[4];
+        [SerializeField] protected GameObject[] stars = new GameObject[4];
 
         #region Singleton
         private static T instance;
@@ -35,7 +35,7 @@ namespace LevelManagement
         } 
         #endregion
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             if (levelTimerText != null)
             {
