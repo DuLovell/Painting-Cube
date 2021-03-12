@@ -58,7 +58,9 @@ MonoBehaviour:
     type: 3}
   loseScreenPrefab: {fileID: 8761114634674919607, guid: 5cfc6f3d99179264eb5ade29da5f3eb0,
     type: 3}
-  loadingScreenPrefab: {fileID: 750402749088466376, guid: d4ac708001006e246a6e7da211da254b,
+  levelMapMenu: {fileID: -4916744210894384727, guid: 65e40b6b95c66a941b72ad0fa41f59de,
+    type: 3}
+  levelMenu: {fileID: 3005744594034751905, guid: 3c0cdfd2b819cb94db92b80aba5bcf6a,
     type: 3}
   menuParent: {fileID: 0}
 --- !u!114 &6958707161835552991

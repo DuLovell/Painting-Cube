@@ -6,10 +6,10 @@ namespace LevelManagement
 {
     public class LoseScreen : Menu<LoseScreen>
     {
-        public void OnMainMenuPressed()
+        public void OnLevelMapPressed()
         {
             base.OnBackPressed();
-            LevelLoader.Instance.LoadMainMenuLevel();
+            LevelLoader.Instance.LoadLevelMap();
         }
 
         public void OnRestartPressed()

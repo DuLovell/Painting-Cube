@@ -10,8 +10,6 @@ namespace LevelManagement
     {
         [SerializeField] private LoadingScreen loadingScreenPrefab;
 
-        private int mainMenuIndex = 0;
-
         private float beforeLoadDelay = 0.5f;
         private float afterLoadDelay = 0.3f;
 
@@ -82,9 +80,13 @@ namespace LevelManagement
         {
             if (levelIndex >= 0 && levelIndex < SceneManager.sceneCountInBuildSettings)
             {
-                if (levelIndex == mainMenuIndex)
+                if (levelIndex == (int)SceneIndexes.MAIN_MENU)
                 {
                     MainMenu.Open();
+                }
+                else if (levelIndex == (int)SceneIndexes.LEVEL_MAP_MENU)
+                {
+                    LevelMapMenu.Open();
                 }
 
                 // NEW ---------------------
@@ -103,7 +105,12 @@ namespace LevelManagement
 
         public void LoadMainMenuLevel()
         {
-            LoadLevel(mainMenuIndex);
+            LoadLevel((int)SceneIndexes.MAIN_MENU);
+        }
+
+        public void LoadLevelMap()
+        {
+            LoadLevel((int)SceneIndexes.LEVEL_MAP_MENU);
         }
     }
 }

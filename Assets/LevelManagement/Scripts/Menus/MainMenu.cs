@@ -8,9 +8,7 @@ namespace LevelManagement
     {
         public void OnPlayPressed()
         {
-            LevelLoader.Instance.LoadNextLevel();
-
-            GameMenu.Open();
+            LevelLoader.Instance.LoadLevelMap();
         }
 
         public void OnSettingsPressed()

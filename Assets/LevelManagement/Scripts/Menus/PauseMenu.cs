@@ -31,10 +31,10 @@ namespace LevelManagement
             base.OnBackPressed();
         }
 
-        public void OnMainMenuPressed()
+        public void OnLevelMapPressed()
         {
             Time.timeScale = 1;
-            LevelLoader.Instance.LoadMainMenuLevel();
+            LevelLoader.Instance.LoadLevelMap();
         } 
         #endregion
     }

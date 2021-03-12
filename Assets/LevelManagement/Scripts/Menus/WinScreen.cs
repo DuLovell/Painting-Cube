@@ -19,9 +19,9 @@ namespace LevelManagement
             base.OnBackPressed();
         }
 
-        public void OnMainMenuPressed()
+        public void OnLevelMapPressed()
         {
-            LevelLoader.Instance.LoadMainMenuLevel();
+            LevelLoader.Instance.LoadLevelMap();
         }
     }
 }

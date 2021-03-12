@@ -10,7 +10,7 @@ TextureImporter:
     second: Atlas_06_Labels_Stars_Chest_Icons_1
   - first:
       213: -8358652413748176617
-    second: Atlas_06_Labels_Stars_Chest_Icons_2
+    second: Plank_Header_Violet
   - first:
       213: -2834386270740006205
     second: Atlas_06_Labels_Stars_Chest_Icons_3
@@ -162,7 +162,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_06_Labels_Stars_Chest_Icons_2
+      name: Plank_Header_Violet
       rect:
         serializedVersion: 2
         x: 5

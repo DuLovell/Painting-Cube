@@ -70,10 +70,15 @@ namespace LevelManagement
             
         }
 
-        public static void Open()
+        public static void Open(int levelId = -1)
         {
             if (MenuManager.Instance != null && instance != null)
             {
+                if (levelId >= 0)
+                {
+
+                }
+
                 MenuManager.Instance.OpenMenu(Instance);
             }
         }

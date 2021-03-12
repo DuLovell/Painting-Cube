@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SceneIndexes
+namespace LevelManagement
 {
-    MAIN_MENU = 0,
+    public enum SceneIndexes
+    {
+        MAIN_MENU = 0,
+        LEVEL_MAP_MENU = 1,
+    }
 }
+
