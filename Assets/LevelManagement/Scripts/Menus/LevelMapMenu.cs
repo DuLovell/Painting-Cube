@@ -10,7 +10,6 @@ namespace LevelManagement
         {
             LevelMenu.Instance.LevelId = levelId;
             LevelMenu.Open();
-            LevelMenu.Instance.SetScreen();
         }
 
         public void OnMainMenuPressed()

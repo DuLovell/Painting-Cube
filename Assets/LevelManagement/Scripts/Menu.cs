@@ -5,10 +5,45 @@ using UnityEngine.UI;
 
 namespace LevelManagement
 {
-    public abstract class Menu<T> : Menu where T: Menu<T>
+    public abstract class StarMenu<T> : Menu<T> where T : StarMenu<T>
     {
         [SerializeField] protected Text levelTimerText;
         [SerializeField] protected GameObject[] stars = new GameObject[4];
+
+        protected virtual void OnEnable()
+        {
+            if (levelTimerText != null)
+            {
+                levelTimerText.text = LevelTimer.MinutesSinceStart + ":" + LevelTimer.SecondsSinceStart.ToString("00");
+            }
+
+            SetActiveStars(true);
+
+        }
+
+        protected virtual void OnDisable()
+        {
+            SetActiveStars(false);
+        }
+
+        private void SetActiveStars(bool mode)
+        {
+            if (GameManager.Instance != null)
+            {
+                for (int starIndex = 0; starIndex < GameManager.Instance.StarsCollected; starIndex++)
+                {
+                    if (stars[starIndex] != null)
+                    {
+                        stars[starIndex].SetActive(mode);
+                    }
+                }
+            }
+        }
+    }    
+
+    public abstract class Menu<T> : Menu where T : Menu<T>
+    {
+        
 
         #region Singleton
         private static T instance;
@@ -35,48 +70,12 @@ namespace LevelManagement
         } 
         #endregion
 
-        protected virtual void OnEnable()
-        {
-            if (levelTimerText != null)
-            {
-                levelTimerText.text = LevelTimer.MinutesSinceStart + ":" + LevelTimer.SecondsSinceStart.ToString("00");
-            }
-
-            if (GameManager.Instance != null)
-            {
-                for (int starIndex = 0; starIndex < GameManager.Instance.StarsCollected; starIndex++)
-                {
-                    if (stars[starIndex] != null)
-                    {
-                        stars[starIndex].SetActive(true);
-                    }
-                }
-            }
-            
-        }
-
-        protected virtual void OnDisable()
-        {
-            int starsTotal = 4;
-
-            for (int starIndex = 0; starIndex < starsTotal; starIndex++)
-            {
-                if (stars[starIndex] != null)
-                {
-                    stars[starIndex].SetActive(false);
-                }
-            }
-        }
+        
 
         public static void Open(int levelId = -1)
         {
             if (MenuManager.Instance != null && instance != null)
             {
-                if (levelId >= 0)
-                {
-
-                }
-
                 MenuManager.Instance.OpenMenu(Instance);
             }
         }

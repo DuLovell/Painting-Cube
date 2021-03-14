@@ -5,9 +5,17 @@ using UnityEngine.UI;
 
 namespace LevelManagement
 {
-    public class PauseMenu : Menu<PauseMenu>
+    public class PauseMenu : StarMenu<PauseMenu>
     {
-        #region Methods
+        [SerializeField] private Text levelIdText;
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            levelIdText.text = $"Level: {GameManager.Instance?.LevelId}";
+        }
+
+        #region Buttons (public)
 
         public void OnResumePressed()
         {

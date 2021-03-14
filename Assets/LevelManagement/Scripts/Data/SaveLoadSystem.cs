@@ -59,7 +59,12 @@ namespace LevelManagement.Data
 
                 PlayerData data = formatter.Deserialize(stream) as PlayerData;
 
-                LevelData levelData = data.levelsData[levelId];
+                LevelData levelData = null;
+                if (data.levelsData.ContainsKey(levelId))
+                {
+                    levelData = data.levelsData[levelId];
+                }
+                
 
                 stream.Close();
                 return levelData;

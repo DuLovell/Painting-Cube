@@ -7,6 +7,7 @@ namespace LevelManagement
 {
     public class GameMenu : Menu<GameMenu>
     {
+        [SerializeField] private Text levelTimerText;
         [SerializeField] private Text groundCellsText;
         [SerializeField] private Text grassCellsText;
 

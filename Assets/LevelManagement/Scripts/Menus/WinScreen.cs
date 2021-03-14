@@ -5,8 +5,17 @@ using UnityEngine.UI;
 
 namespace LevelManagement
 {
-    public class WinScreen : Menu<WinScreen>
+    public class WinScreen : StarMenu<WinScreen>
     {
+        [SerializeField] private Text levelIdText;
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            levelIdText.text = $"Level: {GameManager.Instance?.LevelId}";
+        }
+
+        #region Buttons (public)
         public void OnNextPressed()
         {
             base.OnBackPressed();
@@ -22,7 +31,8 @@ namespace LevelManagement
         public void OnLevelMapPressed()
         {
             LevelLoader.Instance.LoadLevelMap();
-        }
+        } 
+        #endregion
     }
 }
 

@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 namespace LevelManagement
 {
+    [RequireComponent(typeof(DontDestroyOnLoad))]
     public class LoadingScreen : MonoBehaviour
     {
         [SerializeField] private Image fillImage;

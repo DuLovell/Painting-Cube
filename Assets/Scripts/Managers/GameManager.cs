@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
 
     #region Properties
 
+    public int LevelId => levelId;
+
     #region Score
 
     public int ObjectiveScore { get { return objectiveScore; } }

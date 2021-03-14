@@ -13,8 +13,18 @@ MonoBehaviour:
   m_Name: Missions
   m_EditorClassIdentifier: 
   missions:
+  - sceneName: Level0
+    id: 0
+    objectives:
+    - Nothing right now
+    - Nothing right now
   - sceneName: Level1
     id: 1
     objectives:
     - Collect 3 stars
     - In less then 30 seconds
+  - sceneName: Level2
+    id: 2
+    objectives:
+    - Collect 3 stars
+    - In less then 15 seconds

@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 1117540767115541473}
   - component: {fileID: 1117540767115541472}
   m_Layer: 5
-  m_Name: HeaderText
+  m_Name: Level_ID_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Level 1
+  m_Text: PlaceHolder
 --- !u!1 &1117540767223629505
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +658,11 @@ MonoBehaviour:
   - {fileID: 4665782615339888589}
   - {fileID: 4665782614113692240}
   - {fileID: 2780369740234706832}
+  missionList: {fileID: 11400000, guid: 02d183fe18dbb7b46ac8543ace2618bf, type: 2}
+  levelIdHeaderText: {fileID: 1117540767115541472}
   newLevelCanvas: {fileID: 4665782613524249432}
+  objective1Text: {fileID: 2753038166642653932}
+  objective2Text: {fileID: 2753038166053734767}
   oldLevelCanvas: {fileID: 4885227192782387071}
 --- !u!1 &2753038165501007987
 GameObject:
@@ -1251,7 +1255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: In less than 30 seconds
+  m_Text: Placeholder
 --- !u!1 &2753038166642654482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,7 +1334,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Collect 3 stars
+  m_Text: Placeholder
 --- !u!1 &2753038166972074525
 GameObject:
   m_ObjectHideFlags: 0
