@@ -78,5 +78,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cell_DarkGrass
       objectReference: {fileID: 0}
+    - target: {fileID: 7289374755564301019, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7289374755564301019, guid: 5dca459a85a2b904d9d27a311854acd6,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.97
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dca459a85a2b904d9d27a311854acd6, type: 3}
