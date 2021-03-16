@@ -28,11 +28,11 @@ namespace LevelManagement.Data
     }
 
     [Serializable]
-    public  class PlayerData
+    public class PlayerData
     {
-        public  Dictionary<int, LevelData> levelsData = new Dictionary<int, LevelData>(); // информация о каждом уровне
+        public Dictionary<int, LevelData> levelsData = new Dictionary<int, LevelData>(); // информация о каждом уровне
 
-        private  void CompareLevelData(LevelData level)
+        private void CompareLevelData(LevelData level)
         {
             LevelData oldLevelData = levelsData[level.id];
 
@@ -48,7 +48,7 @@ namespace LevelManagement.Data
             }
         }
 
-        public void UpdateData (LevelData level)
+        public void SaveData (LevelData level)
         {
             if (levelsData.ContainsKey(level.id))
             {

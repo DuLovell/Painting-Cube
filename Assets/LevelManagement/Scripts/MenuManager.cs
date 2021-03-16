@@ -5,6 +5,7 @@ using System.Reflection;
 
 namespace LevelManagement
 {
+    [RequireComponent(typeof(DontDestroyOnLoad))]
     public class MenuManager : MonoBehaviour
     {
         [SerializeField] private Menu mainMenuPrefab;

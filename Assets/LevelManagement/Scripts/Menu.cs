@@ -38,6 +38,16 @@ namespace LevelManagement
                     }
                 }
             }
+            else if (mode == false)
+            {
+                for (int starIndex = 0; starIndex < 4; starIndex++)
+                {
+                    if (stars[starIndex] != null)
+                    {
+                        stars[starIndex].SetActive(mode);
+                    }
+                }
+            }
         }
     }    
 

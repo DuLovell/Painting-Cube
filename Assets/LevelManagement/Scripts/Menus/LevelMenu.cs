@@ -76,9 +76,9 @@ namespace LevelManagement
         #endregion
 
         #region Buttons (public)
-        public void OnPlayPressed(int levelIndex)
+        public void OnPlayPressed()
         {
-            LevelLoader.Instance.LoadLevel(levelIndex);
+            LevelLoader.Instance.LoadLevel(levelId + 1);
 
             GameMenu.Open();
         }
