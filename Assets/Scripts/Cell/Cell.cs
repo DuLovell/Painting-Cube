@@ -27,6 +27,7 @@ public class Cell : MonoBehaviour
     private void Awake()
     {
         spriteRendererSelf = GetComponent<SpriteRenderer>();
+        CheckSelfType();
     }
 
     private void Update()

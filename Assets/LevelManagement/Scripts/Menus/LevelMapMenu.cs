@@ -23,8 +23,13 @@ namespace LevelManagement
             }
 
             // Enabling first incompleted level
-            levelLockedImage = levelLockedImages[SaveLoadSystem.LoadLastCompletedLevelData().id + 1];
-            EnableLevelButton(levelLockedImage);
+            if (SaveLoadSystem.LoadLastCompletedLevelData().id + 1 < levelLockedImages.Count)
+            {
+                levelLockedImage = levelLockedImages[SaveLoadSystem.LoadLastCompletedLevelData().id + 1];
+                EnableLevelButton(levelLockedImage);
+            }
+            
+            
 
         }
 
